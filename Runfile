@@ -1,0 +1,42 @@
+title   "My Sinatra Baseline"
+summary "A baseline for Sinatra apps"
+
+trap(:INT) { print "\r" ; exit }
+
+help   "Start the server"
+action :server, :s do
+  run 'rackup -p3000 -o0.0.0.0'
+end
+
+command :get
+
+help  "Download all 3rd party CSS"
+action :all do
+  execute 'get flexbox'
+  execute 'get sanitize'
+  execute 'get marx'
+end
+
+help  "Download FlexBoxGrid"
+action :flexbox do
+  run %Q[wget -qO css/flexboxgrid/flexboxgrid.scss https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.css]
+end
+
+help  "Download Sanitize.css"
+action :sanitize do
+  run %Q[wget -qO css/sanitize/sanitize.scss https://raw.githubusercontent.com/csstools/sanitize.css/master/sanitize.css]
+end
+
+help  "Download Marx SCSS folder"
+action :marx do
+  Dir.chdir 'css/marx' do
+    run %Q[wget -qO marx.zip https://github.com/mblode/marx/archive/master.zip]
+    run %Q[unzip -oj marx.zip 'marx-master/scss/*']
+    run %Q[rm marx.zip]
+
+    # Patch the marx main file to not include sanitize.css
+    content = File.read 'marx.scss'
+    content.gsub! /^@import 'sanitize/, "// @import 'sanitize"
+    File.write 'marx.scss', content
+  end
+end
