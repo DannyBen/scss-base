@@ -4,7 +4,7 @@ SCSS Base
 Mix of 3rd party CSS/SCSS stylesheets.
 
 - Reset with [Sanitize.css]
-- Responsive grid with SCSS adaptation of [Resoinsive.gs]
+- Responsive grid with SCSS adaptation of [Responsive.gs]
 - Classless style with [Marx]
 
 
