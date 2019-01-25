@@ -12,14 +12,8 @@ command :get
 
 help  "Download all 3rd party CSS"
 action :all do
-  execute 'get flexbox'
   execute 'get sanitize'
   execute 'get marx'
-end
-
-help  "Download FlexBoxGrid"
-action :flexbox do
-  run %Q[wget -qO css/flexboxgrid/flexboxgrid.scss https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.css]
 end
 
 help  "Download Sanitize.css"

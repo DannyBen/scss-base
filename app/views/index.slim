@@ -9,31 +9,34 @@ css:
 
 header
   main
-    .row.between-xs
-      .col-xs-4
+    .row.
+      .col.span-6
         a href='/' Home
 
-      .col-xs-4 style='text-align: right'
+      .col.span-6 style='text-align: right'
         a href='/' Sign Out
 
 main
   h1 Heading
 
   section
-    .row.between-xs
-      .col-xs-12.col-sm-4
+    .row
+      .col.span-4
         .box Hello
 
-      .col-xs-12.col-sm-4
+      .col.span-4
         .box World
 
   section
     form
       .row
-        fieldset.col-md-4
+        fieldset.col.span-4
           label Name
           input type='text' 
 
-      .row
-        fieldset.col-xs
-          input type='submit' value='Send'
+        fieldset.col.span-4
+          label Email
+          input type='text' 
+
+      fieldset
+        input type='submit' value='Send Message'
