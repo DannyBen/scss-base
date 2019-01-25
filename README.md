@@ -27,9 +27,9 @@ then run the Sinatra server:
 
 Then you can:
 
-    1. Go to <http://localhost:3000/> - this file can be edited in 
-       [app/views/index.slim](app/views/index.slim)
-    2. To view the full Marx demo, go to <http://localhost:3000/marx.html>
+1. Go to <http://localhost:3000/> - this file can be edited in 
+   [app/views/index.slim](app/views/index.slim)
+2. To view the full Marx demo, go to <http://localhost:3000/marx.html>
 
 ---
 
