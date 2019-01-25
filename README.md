@@ -31,6 +31,11 @@ Then you can:
    [app/views/index.slim](app/views/index.slim)
 2. To view the full Marx demo, go to <http://localhost:3000/marx.html>
 
+For additional developer actions:
+
+    $ run --help
+
+
 ---
 
 [Sanitize.css]: https://github.com/csstools/sanitize.css
