@@ -1,17 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    backports (3.17.2)
+    backports (3.18.1)
     colsole (0.7.2)
     docopt (0.6.1)
-    ffi (1.12.2)
+    ffi (1.13.1)
     multi_json (1.14.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.2)
     puma (4.3.5)
       nio4r (~> 2.0)
-    rack (2.2.2)
+    rack (2.2.3)
     rack-protection (2.0.8.1)
       rack
     rb-fsevent (0.10.4)
